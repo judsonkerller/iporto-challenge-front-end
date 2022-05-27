@@ -1,0 +1,19 @@
+.app-footer {
+    display: flex;
+    height: 100px;
+    background-color: #FFFFFF;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+}
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    color: #D9114A;
+}
+
+.logo-img {
+    margin-left: 15%;
+}

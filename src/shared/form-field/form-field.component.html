@@ -1,0 +1,6 @@
+<div [formGroup]="formGroup" style="margin: 5px">
+    <label [for]="id">{{label}}</label>
+    <input type="text" [id]="id" [formControlName]="controlName" 
+    style="border: 1px solid black"/>
+    <app-field-validation [field]="fieldAbstractControl"></app-field-validation>
+</div>

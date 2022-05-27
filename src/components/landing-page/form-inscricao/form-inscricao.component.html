@@ -1,0 +1,52 @@
+<div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container card-container">
+          FORMULÁRIO DE INSCRIÇÃO
+
+          <br /> <br />
+            <h5 *ngIf="msg | async">{{msg | async}}</h5>
+          <br /> <br />
+
+          <form [formGroup]="formGroup">
+            <app-form-field
+              id="nomeInscricao"
+              label="Nome:"
+              controlName="name"
+              [formGroup]="formGroup"
+              [fieldAbstractControl]="formGroup.controls.name">
+            </app-form-field>
+            <app-form-field
+              id="emailInscricao"
+              label="E-mail:"
+              controlName="email"
+              [formGroup]="formGroup"
+              [fieldAbstractControl]="formGroup.controls.email">
+            </app-form-field>
+            <app-form-field
+              id="telefoneInscricao"
+              label="Telefone:"
+              controlName="telefone"
+              [formGroup]="formGroup"
+              [fieldAbstractControl]="formGroup.controls.telefone">
+            </app-form-field>
+            <label for="gender">Gênero: </label>
+            <select id-="gender" formControlName="gender"
+            style="border: 1px solid black">
+              <option *ngFor="let op of genders" value="{{op.id}}">{{op.name}}</option>
+            </select>
+            <label for="status">Status: </label>
+            <select id-="status" formControlName="status" 
+            style="border: 1px solid black">
+              <option *ngFor="let sts of userStatus" value="{{sts.id}}">{{sts.name}}</option>
+            </select>
+          </form>
+          <br />
+          <button class="bg-white text-black text-center w-24" (click)="cadastrar()"
+          style="border: 1px solid black">Cadastrar</button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>

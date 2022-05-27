@@ -1,0 +1,5 @@
+<div *ngIf="hasErrors()">
+    <span class="validation-message" *ngFor="let error of messages">
+        <p *ngIf="hasError(error.type)">{{showErrorMsg(error)}}</p>
+    </span>
+</div>
